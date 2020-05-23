@@ -55,7 +55,7 @@ Updating a multi link by adding one more item:
         AND
         .directors.last_name = 'Villeneuve'
     SET {
-        actors := .actors UNION (
+        actors += (
             INSERT Person {
                 first_name := 'Dave',
                 last_name := 'Bautista',
